@@ -1,0 +1,382 @@
+/* ==========================================================================
+   CRICKET UMPIRE RECORD CARDS - CORE STYLESHEET
+   Optimized for high-contrast on-field readability, compact handwriting,
+   and crisp A4/A5 double-sided printing.
+   ========================================================================== */
+
+:root {
+  --ink-primary: #0f172a;
+  --ink-secondary: #334155;
+  --ink-muted: #64748b;
+  --border-strong: #0f172a;
+  --border-medium: #475569;
+  --border-light: #94a3b8;
+  --border-faint: #cbd5e1;
+  --bg-header: #0f2744;
+  --bg-subhead: #e2e8f0;
+  --bg-highlight: #fef08a;
+  --bg-powerplay: #e0f2fe;
+  --bg-alert: #fee2e2;
+  --bg-accent: #f8fafc;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink-primary);
+  background-color: #f1f5f9;
+  line-height: 1.2;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* --------------------------------------------------------------------------
+   Screen Preview Wrapper & Top Navigation
+   -------------------------------------------------------------------------- */
+.screen-nav {
+  background: #0f172a;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.screen-nav .nav-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.screen-nav .nav-badge {
+  background: #2563eb;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.screen-nav .nav-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #334155;
+}
+
+.btn-secondary:hover {
+  background: #475569;
+}
+
+.card-container {
+  max-width: 215mm;
+  margin: 20px auto;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Physical Printable Page Layout (A4 Portrait standard)
+   -------------------------------------------------------------------------- */
+.sheet {
+  width: 210mm;
+  /* min-height removed for print fit */
+  background: #fff;
+  margin: 0 auto;
+  padding: 6mm 8mm;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+}
+
+.sheet:last-child {
+  page-break-after: auto;
+  break-after: auto;
+}
+
+/* --------------------------------------------------------------------------
+   Card Header
+   -------------------------------------------------------------------------- */
+.card-header {
+  border: 2px solid var(--border-strong);
+  margin-bottom: 5px;
+}
+
+.card-header-top {
+  background: var(--bg-header);
+  color: #fff;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header-top h1 {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.card-header-top .format-tag {
+  font-size: 11px;
+  font-weight: 700;
+  background: #fff;
+  color: var(--bg-header);
+  padding: 1px 6px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+.card-header-meta {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  font-size: 9px;
+  border-top: 1px solid var(--border-strong);
+  background: #fff;
+}
+
+.card-header-meta .meta-item {
+  padding: 2px 4px;
+  border-right: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-header-meta .meta-item:last-child {
+  border-right: none;
+}
+
+.meta-label {
+  font-weight: 700;
+  color: var(--ink-secondary);
+  text-transform: uppercase;
+  font-size: 8px;
+}
+
+.meta-fill {
+  border-bottom: 1px dotted var(--border-medium);
+  flex: 1;
+  min-height: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   Match Status Bar / Pre-Match Grid
+   -------------------------------------------------------------------------- */
+.match-status-bar {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  border: 1px solid var(--border-strong);
+  margin-bottom: 5px;
+  font-size: 8.5px;
+  background: #fff;
+}
+
+.status-cell {
+  padding: 2px 4px;
+  border-right: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.status-cell:last-child {
+  border-right: none;
+}
+
+.status-cell-title {
+  font-weight: 700;
+  font-size: 7.5px;
+  color: var(--ink-secondary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.status-cell-body {
+  min-height: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   Tables & Grids Common
+   -------------------------------------------------------------------------- */
+table.umpire-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8px;
+  text-align: center;
+}
+
+table.umpire-table th,
+table.umpire-table td {
+  border: 1px solid var(--border-medium);
+  padding: 1.5px 2px;
+  line-height: 1.1;
+  vertical-align: middle;
+}
+
+table.umpire-table th {
+  background-color: var(--bg-subhead);
+  font-weight: 700;
+  font-size: 7.5px;
+  text-transform: uppercase;
+  color: var(--ink-primary);
+}
+
+table.umpire-table td.fill {
+  min-height: 12px;
+}
+
+.highlight-row {
+  background-color: #f8fafc;
+}
+
+.pp-row {
+  background-color: var(--bg-powerplay);
+  font-weight: 600;
+}
+
+.alert-row {
+  background-color: var(--bg-alert);
+}
+
+/* --------------------------------------------------------------------------
+   Sections & Callout Boxes
+   -------------------------------------------------------------------------- */
+.section-title {
+  background: var(--ink-secondary);
+  color: #fff;
+  font-size: 8.5px;
+  font-weight: 700;
+  padding: 2px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-wrapper {
+  border: 1px solid var(--border-strong);
+  margin-bottom: 5px;
+  background: #fff;
+}
+
+/* --------------------------------------------------------------------------
+   Fall of Wickets (FoW) Strip
+   -------------------------------------------------------------------------- */
+.fow-table th {
+  font-size: 7px;
+  padding: 1.5px 1px;
+}
+.fow-table td {
+  height: 14px;
+  font-size: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   Checkboxes & Small Indicators
+   -------------------------------------------------------------------------- */
+.chk-box {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--border-strong);
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+.dot-circle {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  vertical-align: middle;
+  margin: 0 1px;
+}
+
+/* --------------------------------------------------------------------------
+   Print Settings
+   -------------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #fff !important;
+    font-size: 8pt;
+  }
+  .screen-nav, .no-print {
+    display: none !important;
+  }
+  .card-container {
+    display: block !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .sheet {
+    width: 100% !important;
+    min-height: auto !important;
+    max-height: 297mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 4mm 6mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+  .sheet:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+  table.umpire-table th {
+    background-color: #e2e8f0 !important;
+  }
+  .pp-row {
+    background-color: #e0f2fe !important;
+  }
+  .card-header-top {
+    background: #0f2744 !important;
+    color: #fff !important;
+  }
+}

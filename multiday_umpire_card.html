@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Multiday Cricket Umpire Record Card</title>
+<link rel="stylesheet" href="css/umpire_card.css">
+<style>
+  /* Multiday specific styles */
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+  .compact-table th {
+    font-size: 6.8px;
+    padding: 1px 1px;
+  }
+  .compact-table td {
+    height: 9px;
+    font-size: 6.5px;
+    padding: 0.5px 1px;
+    line-height: 1;
+  }
+  .session-header {
+    background-color: #f1f5f9;
+    font-weight: 700;
+  }
+  .badge-pill {
+    display: inline-block;
+    padding: 1px 3px;
+    border: 1px solid #1e293b;
+    border-radius: 2px;
+    font-size: 6.2px;
+    font-weight: 700;
+    margin: 0.5px;
+  }
+  .innings-box {
+    border: 1px solid var(--border-strong);
+    background: #fff;
+    margin-bottom: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-nav no-print">
+  <div class="nav-title">
+    <span>🏏 MULTIDAY MATCH UMPIRE RECORD CARD</span>
+    <span class="nav-badge" style="background: #047857;">2-Day &bull; 3-Day &bull; 4-Day</span>
+  </div>
+  <div class="nav-actions">
+    <a href="index.html" class="btn btn-secondary">← All Cards Index</a>
+    <a href="timed_110_umpire_card.html" class="btn btn-secondary">← Timed 110 Card</a>
+    <button onclick="window.print()" class="btn">🖨️ Print Card (A4 Double-Sided)</button>
+  </div>
+</div>
+
+<div class="card-container">
+
+  <!-- ==========================================
+       SIDE A: SETUP, 1ST INNINGS (BOTH TEAMS), SESSIONS & FOLLOW-ON
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top" style="background: #064e3b;">
+        <h1>MULTIDAY MATCH UMPIRE RECORD CARD &bull; DAYS 1 &amp; 2 &bull; 1ST INNINGS</h1>
+        <span class="format-tag" style="color: #064e3b;">2-DAY / 3-DAY / 4-DAY &bull; MULTI-INNINGS</span>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">Competition:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Dates:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Venue:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Match Duration:</span> [ ] 2-Day &nbsp; [ ] 3-Day &nbsp; [ ] 4-Day</div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Team A:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Team B:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Toss Won By:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Elected To:</span> [ ] Bat &nbsp; [ ] Bowl</div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Umpires:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Scorers:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Daily Overs Quota:</span><span class="meta-fill">96 / 100 Overs</span></div>
+        <div class="meta-item"><span class="meta-label">Over Rate Target:</span><span class="meta-fill">15 Overs / Hour</span></div>
+      </div>
+    </div>
+
+    <!-- Match Schedule & Regulations Bar -->
+    <div class="match-status-bar" style="grid-template-columns: 1.2fr 1.2fr 1.2fr 1.4fr;">
+      <div class="status-cell">
+        <span class="status-cell-title">Daily Session Timings</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          <strong>S1 (Morning):</strong> 11:00 - 13:00 (Lunch 40m)<br>
+          <strong>S2 (Afternoon):</strong> 13:40 - 15:40 (Tea 20m) &bull; <strong>S3:</strong> to Stumps
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Follow-On Thresholds</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          &bull; <strong>4-Day:</strong> 200 runs behind<br>
+          &bull; <strong>3-Day:</strong> 150 runs &bull; <strong>2-Day:</strong> 100 runs
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">New Ball Regulation</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          &bull; Available after <strong>80 Overs</strong> (or 85 ov)<br>
+          &bull; Optional for fielding captain
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">ECB Youth Fast Bowling Limits</span>
+        <div class="status-cell-body" style="font-size: 6.8px;">
+          <strong>U19:</strong> max 7 ov/spell (21/day) &bull; <strong>U17:</strong> max 6 (18/day)<br>
+          <strong>U15:</strong> max 5 ov/spell (16/day) &bull; <em>Rest: min equal overs</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- Innings 1 (Team A) Progression & Wickets Block -->
+    <div class="innings-box">
+      <div class="section-title" style="background: #065f46;">
+        <span>1ST INNINGS &mdash; TEAM A BATTING: _____________________________</span>
+        <span>CLOSED AT: _____ RUNS / _____ WKTS (_____ . _____ OV) &bull; [ ] ALL OUT &nbsp; [ ] DEC</span>
+      </div>
+      <div style="padding: 2px;">
+        <!-- FoW Table -->
+        <table class="umpire-table fow-table" style="margin-bottom: 2px;">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Wkt</th>
+              <th style="width: 9.5%;">1st</th>
+              <th style="width: 9.5%;">2nd</th>
+              <th style="width: 9.5%;">3rd</th>
+              <th style="width: 9.5%;">4th</th>
+              <th style="width: 9.5%;">5th</th>
+              <th style="width: 9.5%;">6th</th>
+              <th style="width: 9.5%;">7th</th>
+              <th style="width: 9.5%;">8th</th>
+              <th style="width: 9.5%;">9th</th>
+              <th style="width: 9.5%;">10th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Score</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Batter</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Over</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        
+        <!-- Bowler Figures Innings 1 -->
+        <table class="umpire-table compact-table">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Team B Bowler Name</th>
+              <th style="width: 10%;">Cat.</th>
+              <th style="width: 8%;">Overs</th>
+              <th style="width: 8%;">Maidens</th>
+              <th style="width: 8%;">Runs</th>
+              <th style="width: 8%;">Wkts</th>
+              <th style="width: 8%;">Wides</th>
+              <th style="width: 8%;">No Balls</th>
+              <th style="width: 22%;">Spells / Youth Rest Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>2.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>3.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>4.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>5.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Innings 1 (Team B) Progression & Wickets Block -->
+    <div class="innings-box">
+      <div class="section-title" style="background: #065f46;">
+        <span>1ST INNINGS &mdash; TEAM B BATTING: _____________________________</span>
+        <span>CLOSED AT: _____ RUNS / _____ WKTS (_____ . _____ OV) &bull; [ ] ALL OUT &nbsp; [ ] DEC</span>
+      </div>
+      <div style="padding: 2px;">
+        <!-- FoW Table -->
+        <table class="umpire-table fow-table" style="margin-bottom: 2px;">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Wkt</th>
+              <th style="width: 9.5%;">1st</th>
+              <th style="width: 9.5%;">2nd</th>
+              <th style="width: 9.5%;">3rd</th>
+              <th style="width: 9.5%;">4th</th>
+              <th style="width: 9.5%;">5th</th>
+              <th style="width: 9.5%;">6th</th>
+              <th style="width: 9.5%;">7th</th>
+              <th style="width: 9.5%;">8th</th>
+              <th style="width: 9.5%;">9th</th>
+              <th style="width: 9.5%;">10th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Score</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Batter</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Over</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        
+        <!-- Bowler Figures Innings 1 -->
+        <table class="umpire-table compact-table">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Team A Bowler Name</th>
+              <th style="width: 10%;">Cat.</th>
+              <th style="width: 8%;">Overs</th>
+              <th style="width: 8%;">Maidens</th>
+              <th style="width: 8%;">Runs</th>
+              <th style="width: 8%;">Wkts</th>
+              <th style="width: 8%;">Wides</th>
+              <th style="width: 8%;">No Balls</th>
+              <th style="width: 22%;">Spells / Youth Rest Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>2.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>3.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>4.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+            <tr><td>5.</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>Spell 1: ___ ov &bull; Rest to ov: ___</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bottom Controls: Follow-On Calculator, New Ball Log & Daily Session Tracker -->
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr 1.3fr; gap: 4px;">
+      
+      <!-- Follow-On Calculator -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">FOLLOW-ON CALCULATOR</div>
+        <div style="padding: 3px; font-size: 7px; display: flex; flex-direction: column; gap: 2px;">
+          <div>Team A 1st Inn: <strong>_____</strong> &bull; Team B 1st Inn: <strong>_____</strong></div>
+          <div>Margin: <strong>_____ runs</strong> [ ] Ahead &nbsp; [ ] Behind</div>
+          <div style="background: #e0f2fe; padding: 2px; border: 1px solid #0284c7; border-radius: 2px;">
+            Req. lead to enforce: <strong>200 / 150 / 100 runs</strong><br>
+            <strong>Follow-On Enforced?</strong> &nbsp; [ ] YES &nbsp; [ ] NO
+          </div>
+          <div>If enforced: Team B bats again immediately.</div>
+        </div>
+      </div>
+
+      <!-- New Ball Log -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">NEW BALL TRACKER (80 OV)</div>
+        <div style="padding: 3px; font-size: 7px; display: flex; flex-direction: column; gap: 2px;">
+          <div><strong>Team A Inn 1:</strong> Taken at Ov: ____ Score: ____</div>
+          <div><strong>Team B Inn 1:</strong> Taken at Ov: ____ Score: ____</div>
+          <div style="border-top: 1px dotted #94a3b8; padding-top: 2px;">
+            <strong>Team A Inn 2:</strong> Taken at Ov: ____ Score: ____<br>
+            <strong>Team B Inn 2:</strong> Taken at Ov: ____ Score: ____
+          </div>
+        </div>
+      </div>
+
+      <!-- Session & Over Rate Day 1 & Day 2 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">DAILY SESSION &amp; OVER RATE LOG</div>
+        <table class="umpire-table" style="font-size: 6.5px;">
+          <thead>
+            <tr>
+              <th>Day</th>
+              <th>S1 (Overs)</th>
+              <th>S2 (Overs)</th>
+              <th>S3 (Overs)</th>
+              <th>Total Ov</th>
+              <th>Target</th>
+              <th>+/-</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Day 1</strong></td><td></td><td></td><td></td><td></td><td>96 / 100</td><td></td></tr>
+            <tr><td><strong>Day 2</strong></td><td></td><td></td><td></td><td></td><td>96 / 100</td><td></td></tr>
+            <tr><td><strong>Day 3</strong></td><td></td><td></td><td></td><td></td><td>96 / 100</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div> <!-- /Sheet 1 -->
+
+
+  <!-- ==========================================
+       SIDE B: 2ND INNINGS (BOTH TEAMS), FINAL DAY LAST HOUR & RESULT
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top" style="background: #064e3b;">
+        <h1>MULTIDAY MATCH UMPIRE RECORD CARD &bull; 2ND INNINGS &bull; FINAL CHASE</h1>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <span class="format-tag" style="background: #fef08a; color: #064e3b;">TARGET: _______ RUNS</span>
+          <span class="format-tag">FINAL DAY LAST HOUR &amp; RESULT</span>
+        </div>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">3rd Innings (Batting):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">4th Innings (Chase):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Lead / Deficit:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Target Overs:</span><span class="meta-fill"></span></div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Final Day Date:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Last Hour Start Time:</span><span class="meta-fill">____:____ (60m to close)</span></div>
+        <div class="meta-item"><span class="meta-label">Min Overs in Last Hr:</span><span class="meta-fill">Min 15 Overs</span></div>
+        <div class="meta-item"><span class="meta-label">Scheduled Close:</span><span class="meta-fill"></span></div>
+      </div>
+    </div>
+
+    <!-- 3rd Innings of Match Progression Block -->
+    <div class="innings-box">
+      <div class="section-title" style="background: #047857;">
+        <span>3RD INNINGS OF MATCH &mdash; BATTING: _____________________________</span>
+        <span>CLOSED AT: _____ RUNS / _____ WKTS (_____ . _____ OV) &bull; [ ] ALL OUT &nbsp; [ ] DEC</span>
+      </div>
+      <div style="padding: 2px;">
+        <!-- FoW Table -->
+        <table class="umpire-table fow-table" style="margin-bottom: 2px;">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Wkt</th>
+              <th style="width: 9.5%;">1st</th>
+              <th style="width: 9.5%;">2nd</th>
+              <th style="width: 9.5%;">3rd</th>
+              <th style="width: 9.5%;">4th</th>
+              <th style="width: 9.5%;">5th</th>
+              <th style="width: 9.5%;">6th</th>
+              <th style="width: 9.5%;">7th</th>
+              <th style="width: 9.5%;">8th</th>
+              <th style="width: 9.5%;">9th</th>
+              <th style="width: 9.5%;">10th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Score</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Batter</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Over</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        
+        <!-- Bowler Figures 3rd Innings -->
+        <table class="umpire-table compact-table">
+          <thead>
+            <tr>
+              <th style="width: 24%;">Bowler Name</th>
+              <th style="width: 10%;">O</th>
+              <th style="width: 10%;">M</th>
+              <th style="width: 10%;">R</th>
+              <th style="width: 10%;">W</th>
+              <th style="width: 10%;">Wides</th>
+              <th style="width: 10%;">NB</th>
+              <th style="width: 16%;">Youth Rest Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>2.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>3.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>4.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 4th Innings of Match (The Final Chase) Progression Block -->
+    <div class="innings-box">
+      <div class="section-title" style="background: #047857;">
+        <span>4TH INNINGS OF MATCH (THE CHASE) &mdash; BATTING: _____________________________</span>
+        <span>TARGET TO WIN: ______ RUNS &bull; SCORE: _____ / _____ WKTS (_____ . _____ OV)</span>
+      </div>
+      <div style="padding: 2px;">
+        <!-- FoW Table -->
+        <table class="umpire-table fow-table" style="margin-bottom: 2px;">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Wkt</th>
+              <th style="width: 9.5%;">1st</th>
+              <th style="width: 9.5%;">2nd</th>
+              <th style="width: 9.5%;">3rd</th>
+              <th style="width: 9.5%;">4th</th>
+              <th style="width: 9.5%;">5th</th>
+              <th style="width: 9.5%;">6th</th>
+              <th style="width: 9.5%;">7th</th>
+              <th style="width: 9.5%;">8th</th>
+              <th style="width: 9.5%;">9th</th>
+              <th style="width: 9.5%;">10th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Score</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Batter</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">Over</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            <tr><td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+        
+        <!-- Bowler Figures 4th Innings -->
+        <table class="umpire-table compact-table">
+          <thead>
+            <tr>
+              <th style="width: 24%;">Bowler Name</th>
+              <th style="width: 10%;">O</th>
+              <th style="width: 10%;">M</th>
+              <th style="width: 10%;">R</th>
+              <th style="width: 10%;">W</th>
+              <th style="width: 10%;">Wides</th>
+              <th style="width: 10%;">NB</th>
+              <th style="width: 16%;">Youth Rest Tracking</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>2.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>3.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+            <tr><td>4.</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Rest to ov: ___</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Final Day Last Hour Tracker, Player Absence Log & Match Result -->
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr 1.3fr; gap: 4px;">
+      
+      <!-- Final Day Last Hour Tracker -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>FINAL DAY &mdash; THE "LAST HOUR"</span>
+          <span>MIN 15 OVERS</span>
+        </div>
+        <div style="padding: 3px; font-size: 7px;">
+          <div>Signaled at: <strong>____:____</strong> &bull; Close: <strong>____:____</strong></div>
+          <div style="margin: 3px 0; display: flex; flex-wrap: wrap; gap: 2px;">
+            <span class="badge-pill">[ ] 1</span>
+            <span class="badge-pill">[ ] 2</span>
+            <span class="badge-pill">[ ] 3</span>
+            <span class="badge-pill">[ ] 4</span>
+            <span class="badge-pill">[ ] 5</span>
+            <span class="badge-pill">[ ] 6</span>
+            <span class="badge-pill">[ ] 7</span>
+            <span class="badge-pill">[ ] 8</span>
+            <span class="badge-pill">[ ] 9</span>
+            <span class="badge-pill">[ ] 10</span>
+            <span class="badge-pill">[ ] 11</span>
+            <span class="badge-pill">[ ] 12</span>
+            <span class="badge-pill">[ ] 13</span>
+            <span class="badge-pill">[ ] 14</span>
+            <span class="badge-pill" style="background: #fef08a;">[ ] 15 (CLOSE)</span>
+          </div>
+          <div style="font-size: 6.5px; color: #475569;">
+            Minimum 15 overs must be bowled. Match ends when result reached or 15 overs bowled.
+          </div>
+        </div>
+      </div>
+
+      <!-- Player Absence & Law 24 Log -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">LAW 24 &bull; PLAYER ABSENCE</div>
+        <table class="umpire-table" style="font-size: 6.5px;">
+          <thead>
+            <tr>
+              <th>Player Name</th>
+              <th>Off</th>
+              <th>On</th>
+              <th>Penalty Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td></td><td></td><td>Can bowl: ___:___</td></tr>
+            <tr><td>2.</td><td></td><td></td><td>Can bowl: ___:___</td></tr>
+            <tr><td>3.</td><td></td><td></td><td>Can bowl: ___:___</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Match Result & Sign-Off -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">MATCH RESULT &amp; SIGN-OFF</div>
+        <div style="padding: 3px; font-size: 7px; display: flex; flex-direction: column; gap: 2px;">
+          <div><strong>Result:</strong> [ ] Won by: _______________________ Margin: ________</div>
+          <div>[ ] Draw &nbsp; [ ] Tie &nbsp; [ ] Match Abandoned</div>
+          <div style="border-top: 1px dotted #94a3b8; padding-top: 1px;">
+            <strong>Law 41/42 Disciplinary / Pitch Warnings:</strong><br>
+            [ ] Running pitch &nbsp; [ ] High full pitch (beamer) &nbsp; [ ] Conduct
+          </div>
+          <div style="font-size: 6.5px; margin-top: 2px; display: flex; justify-content: space-between;">
+            <span>Umpire 1: ___________________</span>
+            <span>Umpire 2: ___________________</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- /Sheet 2 -->
+
+</div>
+
+</body>
+</html>

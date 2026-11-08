@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>T20 Cricket Umpire Record Card</title>
+<link rel="stylesheet" href="css/umpire_card.css">
+<style>
+  /* Format-specific overrides for T20 */
+  .t20-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .over-grid-table th {
+    font-size: 7.5px;
+    padding: 2px 1px;
+  }
+  .over-grid-table td {
+    height: 11px;
+    font-size: 7.5px;
+    padding: 1px 2px;
+  }
+  .ball-dots {
+    display: inline-flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+  }
+  .ball-dot {
+    width: 6.5px;
+    height: 6.5px;
+    border: 1px solid #475569;
+    border-radius: 1px;
+  }
+  .target-badge {
+    background: #0f172a;
+    color: #fff;
+    padding: 2px 6px;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 9px;
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-nav no-print">
+  <div class="nav-title">
+    <span>🏏 T20 UMPIRE RECORD CARD</span>
+    <span class="nav-badge">20 Overs / Side</span>
+  </div>
+  <div class="nav-actions">
+    <a href="index.html" class="btn btn-secondary">← All Cards Index</a>
+    <a href="t50_umpire_card.html" class="btn btn-secondary">T50 Card →</a>
+    <button onclick="window.print()" class="btn">🖨️ Print Card (A4 Double-Sided)</button>
+  </div>
+</div>
+
+<div class="card-container">
+
+  <!-- ==========================================
+       SIDE A: 1ST INNINGS & MATCH SETUP
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top">
+        <h1>T20 MATCH UMPIRE RECORD CARD &bull; INNINGS 1</h1>
+        <span class="format-tag">20 OVERS &bull; MAX 4 OVERS/BOWLER</span>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">Competition:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Venue:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Match No:</span><span class="meta-fill"></span></div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Team 1 (Batting):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Team 2 (Fielding):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Toss Won By:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Elected To:</span> [ ] Bat &nbsp; [ ] Bowl</div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Umpires:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Scorers:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Ball Type:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Scheduled Start:</span><span class="meta-fill"></span></div>
+      </div>
+    </div>
+
+    <!-- Match Control & Regulation Reference Bar -->
+    <div class="match-status-bar">
+      <div class="status-cell">
+        <span class="status-cell-title">Fielding Restrictions (PP)</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          <strong>PP (Ov 1-6):</strong> Max 2 outside ring<br>
+          <strong>Non-PP (Ov 7-20):</strong> Max 5 outside ring
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Bowler Limit</span>
+        <div class="status-cell-body" style="font-size: 8px;">
+          <strong>Max 4 overs</strong> per bowler<br>
+          <em>(Shortened: Tot Ov &divide; 5)</em>
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Short Ball &amp; Free Hit</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          &bull; <strong>1 Bouncer</strong> per over (&gt; shoulder)<br>
+          &bull; <strong>Free Hit</strong> for all No-Balls
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Over Rate Milestones (85m)</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          Ov 5: +21m &bull; Ov 10: +42m<br>
+          Ov 15: +63m &bull; Ov 20: Target Cut-off
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Innings 1 Timing Control</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          Start: ___:___ &nbsp; Cut-off: ___:___<br>
+          Actual Close: ___:___ &nbsp; Allow: ___m
+        </div>
+      </div>
+    </div>
+
+    <!-- Innings 1: 20-Over Grid -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>INNINGS 1 &mdash; OVER-BY-OVER PROGRESSION &amp; BOWLING ANALYSIS</span>
+        <span>MANDATORY POWERPLAY: OVERS 1 TO 6 (HIGHLIGHTED IN BLUE)</span>
+      </div>
+      <table class="umpire-table over-grid-table">
+        <thead>
+          <tr>
+            <th style="width: 3%;">Over</th>
+            <th style="width: 14%;">Bowler Name / No.</th>
+            <th style="width: 15%;">Ball-by-Ball Sequence (Runs / Wkts / Extras)</th>
+            <th style="width: 5%;">Runs</th>
+            <th style="width: 5%;">Extras</th>
+            <th style="width: 8%;">Total Score</th>
+            <th style="width: 5%;">Wkts</th>
+            <th style="width: 13%;">Bowler Progressive (O-M-R-W)</th>
+            <th style="width: 10%;">Time / Target</th>
+            <th style="width: 6%;">Bouncer</th>
+            <th style="width: 6%;">Free Hit</th>
+            <th style="width: 10%;">Umpire Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Overs 1-6: Powerplay -->
+          <tr class="pp-row"><td>1</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>1 - &nbsp; - &nbsp; -</td><td>PP1 Start</td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>2</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>3</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>4</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>5</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Check (+21m)</td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>6</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>PP ENDS</strong></td><td>[ ]</td><td>[ ]</td><td>Max 2 out ends</td></tr>
+          
+          <!-- Overs 7-20: Regular Field -->
+          <tr><td>7</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Max 5 out</td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>8</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>9</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="highlight-row"><td>10</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Check (+42m)</td><td>[ ]</td><td>[ ]</td><td>Mid-Innings check</td></tr>
+          <tr><td>11</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>12</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>13</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>14</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr class="highlight-row"><td>15</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Check (+63m)</td><td>[ ]</td><td>[ ]</td><td>Death overs begin</td></tr>
+          <tr><td>16</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>17</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>18</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>[ ]</td><td>[ ]</td><td></td></tr>
+          <tr><td>19</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Pen Check</td><td>[ ]</td><td>[ ]</td><td>Cut-off check!</td></tr>
+          <tr class="highlight-row"><td>20</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Final Over</td><td>[ ]</td><td>[ ]</td><td>Must start by cut-off</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Fall of Wickets (FoW) -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>FALL OF WICKETS &mdash; INNINGS 1</span>
+        <span>RECORD SCORE &bull; BATSMAN &bull; OVER &bull; DISMISSAL METHOD</span>
+      </div>
+      <table class="umpire-table fow-table">
+        <thead>
+          <tr>
+            <th style="width: 6%;">Wkt</th>
+            <th style="width: 9%;">1st</th>
+            <th style="width: 9%;">2nd</th>
+            <th style="width: 9%;">3rd</th>
+            <th style="width: 9%;">4th</th>
+            <th style="width: 9%;">5th</th>
+            <th style="width: 9%;">6th</th>
+            <th style="width: 9%;">7th</th>
+            <th style="width: 9%;">8th</th>
+            <th style="width: 9%;">9th</th>
+            <th style="width: 9%;">10th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Score</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Batter Out</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Over</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Innings 1 Bowling Analysis & Fast Bowling Directives Summary -->
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4px; margin-bottom: 3px;">
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>BOWLER SUMMARY (MAX 4 OVERS EACH)</span>
+          <span>TICK OVERS: 1 [ ] 2 [ ] 3 [ ] 4 [ ]</span>
+        </div>
+        <table class="umpire-table" style="font-size: 7.5px;">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Bowler Name</th>
+              <th style="width: 15%;">Overs Bowled</th>
+              <th style="width: 8%;">O</th>
+              <th style="width: 8%;">M</th>
+              <th style="width: 8%;">R</th>
+              <th style="width: 8%;">W</th>
+              <th style="width: 8%;">Wides</th>
+              <th style="width: 8%;">NB</th>
+              <th style="width: 12%;">Youth Cat.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+            <tr><td>2.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+            <tr><td>3.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+            <tr><td>4.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+            <tr><td>5.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+            <tr><td>6.</td><td>[1] [2] [3] [4]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Innings 1 Totals & Target Box -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">INNINGS 1 TOTAL &amp; TARGET</div>
+        <div style="padding: 4px; font-size: 8px; display: flex; flex-direction: column; gap: 3px;">
+          <div style="display: flex; justify-content: space-between;">
+            <strong>Total Runs:</strong> <span>_________ / _________ Wkts</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <strong>Overs Bowled:</strong> <span>_________ . _________</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 7.5px; border-top: 1px dotted #94a3b8; padding-top: 2px;">
+            <span>W: ___ NB: ___</span>
+            <span>B: ___ LB: ___ Pen: ___</span>
+          </div>
+          <div style="margin-top: 3px; background: #e0f2fe; padding: 4px; border: 1px solid #0284c7; text-align: center; border-radius: 3px;">
+            <div style="font-size: 7.5px; font-weight: 700; text-transform: uppercase;">Innings 2 Target Score</div>
+            <div style="font-size: 14px; font-weight: 900; color: #0369a1;">______ RUNS</div>
+            <div style="font-size: 7px; color: #0369a1;">(To win in 20 overs &bull; RRR: _____ / ov)</div>
+          </div>
+          <div style="font-size: 7.5px; margin-top: 2px;">
+            <strong>Innings Break:</strong> ____:____ to ____:____ (10/15m)
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- /Sheet 1 -->
+
+
+  <!-- ==========================================
+       SIDE B: 2ND INNINGS & MATCH CONCLUSION
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top">
+        <h1>T20 MATCH UMPIRE RECORD CARD &bull; INNINGS 2</h1>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <span class="target-badge">TARGET: _______ RUNS</span>
+          <span class="format-tag">CHASE &amp; RESULT</span>
+        </div>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">Team 2 (Batting):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Team 1 (Fielding):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Target Overs:</span><span class="meta-fill">20 Ov</span></div>
+        <div class="meta-item"><span class="meta-label">Req. Run Rate:</span><span class="meta-fill"></span></div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Scheduled Start:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Target Cut-Off:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Time Allowances:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Actual Close:</span><span class="meta-fill"></span></div>
+      </div>
+    </div>
+
+    <!-- Innings 2: 20-Over Grid -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>INNINGS 2 &mdash; OVER-BY-OVER PROGRESSION &amp; RUN CHASE</span>
+        <span>PP (1-6): MAX 2 OUTSIDE &bull; NON-PP (7-20): MAX 5 OUTSIDE</span>
+      </div>
+      <table class="umpire-table over-grid-table">
+        <thead>
+          <tr>
+            <th style="width: 3%;">Over</th>
+            <th style="width: 14%;">Bowler Name / No.</th>
+            <th style="width: 15%;">Ball-by-Ball Sequence (Runs / Wkts / Extras)</th>
+            <th style="width: 5%;">Runs</th>
+            <th style="width: 5%;">Extras</th>
+            <th style="width: 8%;">Total Score</th>
+            <th style="width: 5%;">Wkts</th>
+            <th style="width: 13%;">Bowler Progressive (O-M-R-W)</th>
+            <th style="width: 8%;">Runs Req.</th>
+            <th style="width: 8%;">Balls Left</th>
+            <th style="width: 6%;">Free Hit</th>
+            <th style="width: 12%;">Umpire Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Overs 1-6 PP -->
+          <tr class="pp-row"><td>1</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>1 - &nbsp; - &nbsp; -</td><td></td><td>114</td><td>[ ]</td><td>PP1 Start (Max 2 out)</td></tr>
+          <tr class="pp-row"><td>2</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>108</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>3</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>102</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>4</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>96</td><td>[ ]</td><td></td></tr>
+          <tr class="pp-row"><td>5</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>90</td><td>[ ]</td><td>Check (+21m)</td></tr>
+          <tr class="pp-row"><td>6</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>84</td><td>[ ]</td><td><strong>PP ENDS</strong></td></tr>
+          
+          <!-- Overs 7-20 -->
+          <tr><td>7</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>78</td><td>[ ]</td><td>Max 5 out</td></tr>
+          <tr><td>8</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>72</td><td>[ ]</td><td></td></tr>
+          <tr><td>9</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>66</td><td>[ ]</td><td></td></tr>
+          <tr class="highlight-row"><td>10</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>60</td><td>[ ]</td><td>Check (+42m)</td></tr>
+          <tr><td>11</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>54</td><td>[ ]</td><td></td></tr>
+          <tr><td>12</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>48</td><td>[ ]</td><td></td></tr>
+          <tr><td>13</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>42</td><td>[ ]</td><td></td></tr>
+          <tr><td>14</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>36</td><td>[ ]</td><td></td></tr>
+          <tr class="highlight-row"><td>15</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>30</td><td>[ ]</td><td>Check (+63m)</td></tr>
+          <tr><td>16</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>24</td><td>[ ]</td><td></td></tr>
+          <tr><td>17</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>18</td><td>[ ]</td><td></td></tr>
+          <tr><td>18</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>12</td><td>[ ]</td><td></td></tr>
+          <tr><td>19</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>6</td><td>[ ]</td><td>Cut-off check!</td></tr>
+          <tr class="highlight-row"><td>20</td><td></td><td><div class="ball-dots"><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div><div class="ball-dot"></div></div></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td><td>0</td><td>[ ]</td><td>Final Over</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Fall of Wickets 2nd Innings -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>FALL OF WICKETS &mdash; INNINGS 2</span>
+        <span>RECORD SCORE &bull; BATSMAN &bull; OVER &bull; DISMISSAL METHOD</span>
+      </div>
+      <table class="umpire-table fow-table">
+        <thead>
+          <tr>
+            <th style="width: 6%;">Wkt</th>
+            <th style="width: 9%;">1st</th>
+            <th style="width: 9%;">2nd</th>
+            <th style="width: 9%;">3rd</th>
+            <th style="width: 9%;">4th</th>
+            <th style="width: 9%;">5th</th>
+            <th style="width: 9%;">6th</th>
+            <th style="width: 9%;">7th</th>
+            <th style="width: 9%;">8th</th>
+            <th style="width: 9%;">9th</th>
+            <th style="width: 9%;">10th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Score</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Batter Out</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Over</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom Grids: Rain/DLS Table, Bowler Summary Innings 2, Disciplinary & Match Result -->
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr 1.1fr; gap: 4px;">
+      
+      <!-- Bowlers Innings 2 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">BOWLER SUMMARY (INN 2)</div>
+        <table class="umpire-table" style="font-size: 7.5px;">
+          <thead>
+            <tr>
+              <th style="width: 32%;">Bowler</th>
+              <th style="width: 17%;">Overs</th>
+              <th style="width: 11%;">O</th>
+              <th style="width: 11%;">M</th>
+              <th style="width: 11%;">R</th>
+              <th style="width: 11%;">W</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6.</td><td>[1][2][3][4]</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DLS / Rain Interruption Table -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">WEATHER &amp; DLS CALCULATION</div>
+        <div style="padding: 3px; font-size: 7px; display: flex; flex-direction: column; gap: 2px;">
+          <div><strong>Min Overs For Result:</strong> 5 overs/side</div>
+          <div><strong>Time Lost:</strong> _____ mins &bull; <strong>Deduct:</strong> _____ ov</div>
+          <div><strong>Revised Overs:</strong> _____ ov / side</div>
+          <div><strong>Revised PP:</strong> _____ overs</div>
+          <div><strong>Bowler Max:</strong> ___, ___, ___ ov</div>
+          <div style="background: #fef08a; padding: 2px; border: 1px solid #eab308; border-radius: 2px; text-align: center; margin-top: 2px;">
+            <strong>REVISED DLS TARGET:</strong><br>
+            <span style="font-size: 11px; font-weight: 900;">______ RUNS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Match Result & Sign-Off -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">MATCH RESULT &amp; SIGN-OFF</div>
+        <div style="padding: 3px; font-size: 7.5px; display: flex; flex-direction: column; gap: 3px;">
+          <div><strong>Winner:</strong> _________________________________</div>
+          <div><strong>Margin:</strong> Runs: _____ &bull; Wkts: _____</div>
+          <div><strong>Player of Match:</strong> _____________________</div>
+          <div style="border-top: 1px dotted #94a3b8; padding-top: 2px;">
+            <strong>Law 41/42 Notes / Warnings:</strong><br>
+            [ ] Running pitch &nbsp; [ ] Beamer &nbsp; [ ] Conduct
+          </div>
+          <div style="font-size: 7px; margin-top: 2px; display: flex; justify-content: space-between;">
+            <span>Ump 1: _________________</span>
+            <span>Ump 2: _________________</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- /Sheet 2 -->
+
+</div>
+
+</body>
+</html>

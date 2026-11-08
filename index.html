@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cricket Umpires Record Cards Suite &bull; T20, T50, Timed (110 Split), Multiday</title>
+<link rel="stylesheet" href="css/umpire_card.css">
+<style>
+  body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  .hub-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px 60px 20px;
+  }
+  .hero-header {
+    text-align: center;
+    padding: 30px 10px 40px;
+    border-bottom: 1px solid #334155;
+    margin-bottom: 35px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: #1e3a8a;
+    color: #60a5fa;
+    border: 1px solid #2563eb;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .hero-title {
+    font-size: 32px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+    color: #94a3b8;
+    max-width: 750px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+    margin-bottom: 45px;
+  }
+  .format-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .format-card:hover {
+    transform: translateY(-3px);
+    border-color: #3b82f6;
+  }
+  .format-card-header {
+    padding: 16px 18px;
+    border-bottom: 1px solid #334155;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .format-card-header h2 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+  }
+  .badge-format {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  .bg-t20 { background: #1d4ed8; color: #fff; }
+  .bg-t50 { background: #0284c7; color: #fff; }
+  .bg-timed { background: #be123c; color: #fff; }
+  .bg-multiday { background: #047857; color: #fff; }
+
+  .format-card-body {
+    padding: 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.45;
+  }
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .feature-list li span.bullet {
+    color: #38bdf8;
+    font-weight: bold;
+  }
+  .format-card-actions {
+    padding: 14px 18px;
+    background: #0f172a;
+    border-top: 1px solid #334155;
+    display: flex;
+    gap: 8px;
+  }
+  .btn-card {
+    flex: 1;
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .btn-view {
+    background: #2563eb;
+    color: #fff;
+  }
+  .btn-view:hover {
+    background: #1d4ed8;
+  }
+  .btn-pdf {
+    background: #334155;
+    color: #f1f5f9;
+  }
+  .btn-pdf:hover {
+    background: #475569;
+  }
+
+  /* Reference Guide Section */
+  .guide-section {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  .guide-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+  }
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 768px) {
+    .guide-grid { grid-template-columns: 1fr; }
+  }
+  .guide-box {
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #cbd5e1;
+  }
+  .guide-box h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #38bdf8;
+    margin-bottom: 8px;
+  }
+  table.ref-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    font-size: 11.5px;
+  }
+  table.ref-table th, table.ref-table td {
+    border: 1px solid #334155;
+    padding: 5px 8px;
+    text-align: left;
+  }
+  table.ref-table th {
+    background: #1e293b;
+    color: #f8fafc;
+    font-weight: 700;
+  }
+  table.ref-table td {
+    color: #cbd5e1;
+  }
+</style>
+</head>
+<body>
+
+<div class="hub-container">
+  
+  <!-- Header -->
+  <header class="hero-header">
+    <div class="hero-badge">Official Match Officiating Suite</div>
+    <h1 class="hero-title">Cricket Umpires Record Cards</h1>
+    <p class="hero-subtitle">
+      Professional, print-ready, double-sided match record cards tailored specifically for <strong>T20</strong>, <strong>T50 (One-Day)</strong>, <strong>Timed (110 Split as per Herts Premier)</strong>, and <strong>Multiday</strong> cricket.
+    </p>
+  </header>
+
+  <!-- 4 Cards Selector Grid -->
+  <div class="format-grid">
+    
+    <!-- 1. T20 -->
+    <div class="format-card">
+      <div class="format-card-header">
+        <h2>T20 Limited Overs</h2>
+        <span class="badge-format bg-t20">20 Overs</span>
+      </div>
+      <div class="format-card-body">
+        <p>Optimized for fast-paced 20-over matches with tight over-rate tracking and in-game penalties.</p>
+        <ul class="feature-list">
+          <li><span class="bullet">&bull;</span> <strong>Over Limit:</strong> Max 4 overs per bowler</li>
+          <li><span class="bullet">&bull;</span> <strong>Powerplay:</strong> Overs 1–6 (max 2 fielders out)</li>
+          <li><span class="bullet">&bull;</span> <strong>Non-PP:</strong> Overs 7–20 (max 5 fielders out)</li>
+          <li><span class="bullet">&bull;</span> <strong>Cut-Off Check:</strong> 85m innings countdown</li>
+          <li><span class="bullet">&bull;</span> <strong>Free Hits:</strong> All No-Balls &bull; 1 Bouncer/ov</li>
+          <li><span class="bullet">&bull;</span> <strong>Rain/DLS:</strong> Min 5 overs target table</li>
+        </ul>
+      </div>
+      <div class="format-card-actions">
+        <a href="t20_umpire_card.html" class="btn-card btn-view">👁️ View &amp; Print</a>
+        <a href="pdfs/t20_umpire_card.pdf" target="_blank" class="btn-card btn-pdf">📄 Open PDF</a>
+      </div>
+    </div>
+
+    <!-- 2. T50 -->
+    <div class="format-card">
+      <div class="format-card-header">
+        <h2>T50 One-Day</h2>
+        <span class="badge-format bg-t50">50 Overs</span>
+      </div>
+      <div class="format-card-body">
+        <p>Comprehensive 50-over sheet with powerplay blocks, scheduled drinks, and 10-over bowler tallies.</p>
+        <ul class="feature-list">
+          <li><span class="bullet">&bull;</span> <strong>Over Limit:</strong> Max 10 overs per bowler</li>
+          <li><span class="bullet">&bull;</span> <strong>Powerplays:</strong> PP1 (1-10), PP2 (11-40), PP3 (41-50)</li>
+          <li><span class="bullet">&bull;</span> <strong>Drinks:</strong> Scheduled at Overs 17 &amp; 34</li>
+          <li><span class="bullet">&bull;</span> <strong>Short Balls:</strong> Max 2 bouncers per over</li>
+          <li><span class="bullet">&bull;</span> <strong>Youth Directives:</strong> ECB U13–U19 tracking</li>
+          <li><span class="bullet">&bull;</span> <strong>Rain/DLS:</strong> Min 20 overs target table</li>
+        </ul>
+      </div>
+      <div class="format-card-actions">
+        <a href="t50_umpire_card.html" class="btn-card btn-view">👁️ View &amp; Print</a>
+        <a href="pdfs/t50_umpire_card.pdf" target="_blank" class="btn-card btn-pdf">📄 Open PDF</a>
+      </div>
+    </div>
+
+    <!-- 3. Timed (110 Split Herts Premier) -->
+    <div class="format-card">
+      <div class="format-card-header">
+        <h2>Timed (110 Split)</h2>
+        <span class="badge-format bg-timed">Herts Premier</span>
+      </div>
+      <div class="format-card-body">
+        <p>Built strictly to Saracens Herts Premier League regulations for declaration timed fixtures.</p>
+        <ul class="feature-list">
+          <li><span class="bullet">&bull;</span> <strong>Match Pool:</strong> 110 Total Overs pool</li>
+          <li><span class="bullet">&bull;</span> <strong>1st Inn Cap:</strong> Max 58 overs (Compulsory close)</li>
+          <li><span class="bullet">&bull;</span> <strong>Split Allocation:</strong> 52 base + unused 1st inn overs</li>
+          <li><span class="bullet">&bull;</span> <strong>The Last Hour:</strong> Min 20 overs countdown checklist</li>
+          <li><span class="bullet">&bull;</span> <strong>Herts Bonus:</strong> Batting points from 110 to 245 runs</li>
+          <li><span class="bullet">&bull;</span> <strong>Bowlers:</strong> No max over limits (Unlimited)</li>
+        </ul>
+      </div>
+      <div class="format-card-actions">
+        <a href="timed_110_umpire_card.html" class="btn-card btn-view">👁️ View &amp; Print</a>
+        <a href="pdfs/timed_110_umpire_card.pdf" target="_blank" class="btn-card btn-pdf">📄 Open PDF</a>
+      </div>
+    </div>
+
+    <!-- 4. Multiday -->
+    <div class="format-card">
+      <div class="format-card-header">
+        <h2>Multiday Matches</h2>
+        <span class="badge-format bg-multiday">2, 3 &amp; 4 Day</span>
+      </div>
+      <div class="format-card-body">
+        <p>Engineered for multi-innings matches with daily session logs, follow-on margins, and new ball logs.</p>
+        <ul class="feature-list">
+          <li><span class="bullet">&bull;</span> <strong>Multi-Innings:</strong> All 4 innings tracked in full</li>
+          <li><span class="bullet">&bull;</span> <strong>Daily Quota:</strong> 96–100 overs across 3 sessions</li>
+          <li><span class="bullet">&bull;</span> <strong>Follow-On:</strong> 200 (4-day), 150 (3-day), 100 (2-day)</li>
+          <li><span class="bullet">&bull;</span> <strong>New Ball:</strong> Eligible after 80 overs</li>
+          <li><span class="bullet">&bull;</span> <strong>Final Day:</strong> Last Hour minimum 15 overs</li>
+          <li><span class="bullet">&bull;</span> <strong>Law 24:</strong> Player absence penalty time tracker</li>
+        </ul>
+      </div>
+      <div class="format-card-actions">
+        <a href="multiday_umpire_card.html" class="btn-card btn-view">👁️ View &amp; Print</a>
+        <a href="pdfs/multiday_umpire_card.pdf" target="_blank" class="btn-card btn-pdf">📄 Open PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Umpire Handbook & Key Regulations Reference Guide -->
+  <section class="guide-section">
+    <div class="guide-title">
+      <span>📖 Umpire's Field Reference &amp; Format Comparison</span>
+    </div>
+    
+    <div class="guide-grid">
+      
+      <!-- Box 1: Hertfordshire Premier League 110 Split Timed Specifics -->
+      <div class="guide-box">
+        <h3>🏆 Herts Premier "110 Split" Deep Dive</h3>
+        <p>In the Saracens Hertfordshire Premier Cricket League timed matches (mid-season weeks):</p>
+        <ul style="margin: 6px 0 6px 18px; padding: 0;">
+          <li><strong>Match Duration:</strong> 110 overs total shared across both innings.</li>
+          <li><strong>Team 1 Restriction:</strong> Capped at 58 overs maximum. If they bat 58 overs, innings is compulsorily closed.</li>
+          <li><strong>Tactical Declaration Incentive:</strong> If Team 1 declares after 45 overs, Team 2 receives $110 - 45 = 65$ overs to chase!</li>
+          <li><strong>The Last Hour:</strong> Must be called and signaled at the designated time (e.g. 5:30pm or 1 hour prior to scheduled close). A minimum of <strong>20 overs</strong> must be bowled.</li>
+          <li><strong>Batting Bonus Points (starts at 110):</strong> 110=1, 125=2, 140=3, 155=4, 170=5, 185=6, 200=7, 215=8, 230=9, 245=10 pts.</li>
+          <li><strong>Bowling Bonus Points:</strong> 3 wkts=1, 5 wkts=2, 7 wkts=3, 9 wkts=4, 10 wkts=5 pts.</li>
+        </ul>
+      </div>
+
+      <!-- Box 2: ECB Youth Fast Bowling Directives -->
+      <div class="guide-box">
+        <h3>⚡ ECB Fast Bowling Directives (Youth)</h3>
+        <p>Umpires must monitor junior pace bowlers regardless of match format:</p>
+        <table class="ref-table">
+          <thead>
+            <tr><th>Age Category</th><th>Max Spell</th><th>Daily Max</th><th>Min Rest</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Under 19</td><td>7 overs</td><td>21 overs</td><td>Same end ovs</td></tr>
+            <tr><td>Under 17</td><td>6 overs</td><td>18 overs</td><td>Same end ovs</td></tr>
+            <tr><td>Under 15</td><td>5 overs</td><td>16 overs</td><td>Same end ovs</td></tr>
+            <tr><td>Under 13</td><td>4 overs</td><td>8 overs</td><td>Same end ovs</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: 11px; margin-top: 6px; color: #94a3b8;">
+          *Rest rule: A bowler who reaches their spell limit cannot bowl again until the same number of overs have been bowled from that end.
+        </p>
+      </div>
+
+      <!-- Box 3: Over-Rate Calculation & Penalties -->
+      <div class="guide-box">
+        <h3>⏱️ Over Rates &amp; Cut-Off Rules</h3>
+        <p>Target timings and slow over-rate in-match sanctions:</p>
+        <ul style="margin: 6px 0 6px 18px; padding: 0;">
+          <li><strong>T20 Target:</strong> 85 minutes per innings (~4.25 mins/over). If over 20 hasn't started by the cut-off time, the bowling team loses 1 boundary fielder (only 4 allowed outside circle).</li>
+          <li><strong>T50 Target:</strong> 3 hours 30 mins (210 mins, ~14.3 to 17 overs/hour).</li>
+          <li><strong>Allowances to record:</strong> DRS reviews, player injuries/treatment, lost balls, sightscreen adjustments, batter delays.</li>
+        </ul>
+      </div>
+
+      <!-- Box 4: Printing & Folding Instructions -->
+      <div class="guide-box">
+        <h3>🖨️ How to Print &amp; Prepare Your Cards</h3>
+        <p>For best results on the field:</p>
+        <ul style="margin: 6px 0 6px 18px; padding: 0;">
+          <li><strong>Cardstock:</strong> Print on <strong>160gsm to 220gsm card</strong> (matte white or off-white) so ballpoint pen and pencil will not bleed through.</li>
+          <li><strong>Duplex Setting:</strong> Select <strong>"Print on Both Sides" (Flip on Long Edge)</strong> for A4 portrait. Page 1 prints on the front (Innings 1 / Setup), Page 2 on the back (Innings 2 / Target / Result).</li>
+          <li><strong>Pocket Wallet:</strong> Cards fit into standard umpire pocket wallets, notebook holders, or weather-resistant transparent PVC sleeves.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

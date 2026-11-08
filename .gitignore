@@ -1,0 +1,5 @@
+# Ignored directories
+tries/
+.cache/
+*.log
+.DS_Store

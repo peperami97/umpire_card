@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>T50 Cricket Umpire Record Card</title>
+<link rel="stylesheet" href="css/umpire_card.css">
+<style>
+  /* Format-specific overrides for T50 */
+  .grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+  .compact-over-table th {
+    font-size: 7px;
+    padding: 1.5px 1px;
+  }
+  .compact-over-table td {
+    height: 9.5px;
+    font-size: 7px;
+    padding: 0.5px 1px;
+    line-height: 1;
+  }
+  .drinks-marker {
+    background-color: #fef08a !important;
+    font-weight: 700;
+    color: #854d0e;
+  }
+  .pp1-marker {
+    background-color: #dbeafe !important;
+  }
+  .pp3-marker {
+    background-color: #fef3c7 !important;
+  }
+</style>
+</head>
+<body>
+
+<div class="screen-nav no-print">
+  <div class="nav-title">
+    <span>🏏 T50 UMPIRE RECORD CARD</span>
+    <span class="nav-badge">50 Overs / Side</span>
+  </div>
+  <div class="nav-actions">
+    <a href="index.html" class="btn btn-secondary">← All Cards Index</a>
+    <a href="t20_umpire_card.html" class="btn btn-secondary">← T20 Card</a>
+    <a href="timed_110_umpire_card.html" class="btn btn-secondary">Timed 110 Card →</a>
+    <button onclick="window.print()" class="btn">🖨️ Print Card (A4 Double-Sided)</button>
+  </div>
+</div>
+
+<div class="card-container">
+
+  <!-- ==========================================
+       SIDE A: 1ST INNINGS (50 OVERS) & MATCH SETUP
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top">
+        <h1>50-OVER ONE-DAY MATCH UMPIRE RECORD CARD &bull; INNINGS 1</h1>
+        <span class="format-tag">50 OVERS &bull; MAX 10 OVERS/BOWLER</span>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">Competition:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Venue:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Match No:</span><span class="meta-fill"></span></div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Team 1 (Batting):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Team 2 (Fielding):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Toss Won By:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Elected To:</span> [ ] Bat &nbsp; [ ] Bowl</div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Umpires:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Scorers:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Ball Type:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Scheduled Start:</span><span class="meta-fill"></span></div>
+      </div>
+    </div>
+
+    <!-- Match Status & Regulation Reference Bar -->
+    <div class="match-status-bar">
+      <div class="status-cell">
+        <span class="status-cell-title">Powerplay Fielding Limits</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          <strong>PP1 (1-10):</strong> Max 2 out &bull; <strong>PP2 (11-40):</strong> Max 4 out<br>
+          <strong>PP3 (41-50):</strong> Max 5 out <em>(or local league rule)</em>
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Bowler Maximum</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          <strong>Max 10 overs</strong> per bowler<br>
+          <em>(Reduced match: Tot Ov &divide; 5)</em>
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Short Balls &amp; No-Balls</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          &bull; <strong>Max 2 Bouncers</strong> / over (&gt; shoulder)<br>
+          &bull; <strong>Free Hit</strong> for front-foot No-Balls
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Scheduled Drinks Breaks</span>
+        <div class="status-cell-body" style="font-size: 7.5px;">
+          &bull; After <strong>Over 17</strong> (5 mins)<br>
+          &bull; After <strong>Over 34</strong> (5 mins)
+        </div>
+      </div>
+      <div class="status-cell">
+        <span class="status-cell-title">Innings 1 Over Rate Target</span>
+        <div class="status-cell-body" style="font-size: 7px;">
+          Start: ___:___ &nbsp; Cut-off: ___:___ (3h 30m)<br>
+          Allowances: _____ m &bull; Close: ___:___
+        </div>
+      </div>
+    </div>
+
+    <!-- 50 Overs Progression Grid: 2 Columns of 25 Overs -->
+    <div class="grid-2col" style="margin-bottom: 4px;">
+      
+      <!-- Column 1: Overs 1 to 25 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>OVERS 1 TO 25 (PP1: 1-10 &bull; DRINKS: OV 17)</span>
+          <span>MAX 2 OUT (1-10)</span>
+        </div>
+        <table class="umpire-table compact-over-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Ov</th>
+              <th style="width: 25%;">Bowler Name / No.</th>
+              <th style="width: 14%;">Runs Details</th>
+              <th style="width: 6%;">Runs</th>
+              <th style="width: 6%;">Ext</th>
+              <th style="width: 13%;">Score</th>
+              <th style="width: 5%;">W</th>
+              <th style="width: 16%;">Bowler (O-M-R-W)</th>
+              <th style="width: 10%;">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pp1-marker"><td>1</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>1 - &nbsp; - &nbsp; -</td><td>PP1 Start</td></tr>
+            <tr class="pp1-marker"><td>2</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>3</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>4</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>5</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>6</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>7</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>8</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>9</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>10</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>PP1 ENDS</strong></td></tr>
+            <tr><td>11</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>PP2 Start</td></tr>
+            <tr><td>12</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>13</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>14</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>15</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>16</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="drinks-marker"><td>17</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>DRINKS (5m)</strong></td></tr>
+            <tr><td>18</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>19</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>20</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>21</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>22</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>23</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>24</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="highlight-row"><td>25</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Halfway (25 ov)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Column 2: Overs 26 to 50 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>OVERS 26 TO 50 (DRINKS: OV 34 &bull; PP3: 41-50)</span>
+          <span>MAX 5 OUT (41-50)</span>
+        </div>
+        <table class="umpire-table compact-over-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Ov</th>
+              <th style="width: 25%;">Bowler Name / No.</th>
+              <th style="width: 14%;">Runs Details</th>
+              <th style="width: 6%;">Runs</th>
+              <th style="width: 6%;">Ext</th>
+              <th style="width: 13%;">Score</th>
+              <th style="width: 5%;">W</th>
+              <th style="width: 16%;">Bowler (O-M-R-W)</th>
+              <th style="width: 10%;">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>26</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>27</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>28</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>29</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>30</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>31</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>32</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>33</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="drinks-marker"><td>34</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>DRINKS (5m)</strong></td></tr>
+            <tr><td>35</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>36</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>37</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>38</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>39</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>40</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>PP2 ENDS</strong></td></tr>
+            <tr class="pp3-marker"><td>41</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>PP3 Start</td></tr>
+            <tr class="pp3-marker"><td>42</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>43</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>44</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>45</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>46</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>47</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>48</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>49</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Cut-off check!</td></tr>
+            <tr class="pp3-marker"><td>50</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td><strong>FINAL OVER</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Fall of Wickets (FoW) -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>FALL OF WICKETS &mdash; INNINGS 1</span>
+        <span>RECORD SCORE &bull; BATSMAN &bull; OVER &bull; DISMISSAL METHOD</span>
+      </div>
+      <table class="umpire-table fow-table">
+        <thead>
+          <tr>
+            <th style="width: 6%;">Wkt</th>
+            <th style="width: 9%;">1st</th>
+            <th style="width: 9%;">2nd</th>
+            <th style="width: 9%;">3rd</th>
+            <th style="width: 9%;">4th</th>
+            <th style="width: 9%;">5th</th>
+            <th style="width: 9%;">6th</th>
+            <th style="width: 9%;">7th</th>
+            <th style="width: 9%;">8th</th>
+            <th style="width: 9%;">9th</th>
+            <th style="width: 9%;">10th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Score</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Batter Out</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Over</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bowling Analysis & Youth Directives + Innings Totals -->
+    <div style="display: grid; grid-template-columns: 2.2fr 1fr; gap: 4px;">
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>BOWLING ANALYSIS &mdash; MAX 10 OVERS EACH</span>
+          <span>TICK OFF OVERS (1 TO 10)</span>
+        </div>
+        <table class="umpire-table" style="font-size: 7px;">
+          <thead>
+            <tr>
+              <th style="width: 20%;">Bowler Name</th>
+              <th style="width: 25%;">Overs Tick Tracker</th>
+              <th style="width: 6%;">O</th>
+              <th style="width: 6%;">M</th>
+              <th style="width: 7%;">R</th>
+              <th style="width: 6%;">W</th>
+              <th style="width: 6%;">Wd</th>
+              <th style="width: 6%;">NB</th>
+              <th style="width: 18%;">Youth Cat. / Spell Limits</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>2.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>3.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>4.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>5.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>6.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+            <tr><td>7.</td><td style="letter-spacing: 1px;">[1][2][3][4][5][6][7][8][9][10]</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Open / U__ (Max __)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Innings 1 Totals & Target Box -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">INNINGS 1 TOTAL &amp; TARGET</div>
+        <div style="padding: 3px; font-size: 7.5px; display: flex; flex-direction: column; gap: 2px;">
+          <div style="display: flex; justify-content: space-between;">
+            <strong>Total Runs:</strong> <span>_________ / _________ Wkts</span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <strong>Overs Bowled:</strong> <span>_________ . _________</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 7px; border-top: 1px dotted #94a3b8; padding-top: 2px;">
+            <span>W: ___ NB: ___</span>
+            <span>B: ___ LB: ___ Pen: ___</span>
+          </div>
+          <div style="margin-top: 2px; background: #e0f2fe; padding: 3px; border: 1px solid #0284c7; text-align: center; border-radius: 3px;">
+            <div style="font-size: 7px; font-weight: 700; text-transform: uppercase;">Innings 2 Target Score</div>
+            <div style="font-size: 13px; font-weight: 900; color: #0369a1;">______ RUNS</div>
+            <div style="font-size: 6.5px; color: #0369a1;">(To win in 50 ov &bull; RRR: _____ / ov)</div>
+          </div>
+          <div style="font-size: 7px; margin-top: 1px;">
+            <strong>Interval:</strong> ____:____ to ____:____ (30/45m)
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- /Sheet 1 -->
+
+
+  <!-- ==========================================
+       SIDE B: 2ND INNINGS (50 OVERS) & RESULT
+       ========================================== -->
+  <div class="sheet">
+    
+    <!-- Header -->
+    <div class="card-header">
+      <div class="card-header-top">
+        <h1>50-OVER ONE-DAY MATCH UMPIRE RECORD CARD &bull; INNINGS 2</h1>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <span class="format-tag" style="background: #fef08a; color: #854d0e;">TARGET: _______ RUNS</span>
+          <span class="format-tag">CHASE &amp; RESULT</span>
+        </div>
+      </div>
+      <div class="card-header-meta">
+        <div class="meta-item"><span class="meta-label">Team 2 (Batting):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Team 1 (Fielding):</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Target Overs:</span><span class="meta-fill">50 Ov</span></div>
+        <div class="meta-item"><span class="meta-label">Req. Run Rate:</span><span class="meta-fill"></span></div>
+      </div>
+      <div class="card-header-meta" style="border-top: 1px solid var(--border-medium);">
+        <div class="meta-item"><span class="meta-label">Start Time:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Target Cut-Off:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Allowances:</span><span class="meta-fill"></span></div>
+        <div class="meta-item"><span class="meta-label">Actual Close:</span><span class="meta-fill"></span></div>
+      </div>
+    </div>
+
+    <!-- 50 Overs Progression Grid: 2 Columns of 25 Overs (Innings 2) -->
+    <div class="grid-2col" style="margin-bottom: 4px;">
+      
+      <!-- Column 1: Overs 1 to 25 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>OVERS 1 TO 25 (PP1: 1-10 &bull; DRINKS: OV 17)</span>
+          <span>RUN CHASE</span>
+        </div>
+        <table class="umpire-table compact-over-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Ov</th>
+              <th style="width: 25%;">Bowler Name / No.</th>
+              <th style="width: 14%;">Runs Details</th>
+              <th style="width: 6%;">Runs</th>
+              <th style="width: 6%;">Ext</th>
+              <th style="width: 13%;">Score</th>
+              <th style="width: 5%;">W</th>
+              <th style="width: 16%;">Bowler (O-M-R-W)</th>
+              <th style="width: 10%;">Runs Req.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pp1-marker"><td>1</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>1 - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>2</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>3</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>4</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>5</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>6</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>7</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>8</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>9</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp1-marker"><td>10</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>PP1 Ends</td></tr>
+            <tr><td>11</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>12</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>13</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>14</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>15</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>16</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="drinks-marker"><td>17</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Drinks</td></tr>
+            <tr><td>18</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>19</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>20</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>21</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>22</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>23</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>24</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="highlight-row"><td>25</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Halfway</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Column 2: Overs 26 to 50 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">
+          <span>OVERS 26 TO 50 (DRINKS: OV 34 &bull; PP3: 41-50)</span>
+          <span>FINAL CHASE</span>
+        </div>
+        <table class="umpire-table compact-over-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">Ov</th>
+              <th style="width: 25%;">Bowler Name / No.</th>
+              <th style="width: 14%;">Runs Details</th>
+              <th style="width: 6%;">Runs</th>
+              <th style="width: 6%;">Ext</th>
+              <th style="width: 13%;">Score</th>
+              <th style="width: 5%;">W</th>
+              <th style="width: 16%;">Bowler (O-M-R-W)</th>
+              <th style="width: 10%;">Runs Req.</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>26</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>27</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>28</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>29</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>30</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>31</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>32</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>33</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="drinks-marker"><td>34</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>Drinks</td></tr>
+            <tr><td>35</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>36</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>37</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>38</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>39</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr><td>40</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>PP2 Ends</td></tr>
+            <tr class="pp3-marker"><td>41</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>PP3 Start</td></tr>
+            <tr class="pp3-marker"><td>42</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>43</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>44</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>45</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>46</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>47</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>48</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>49</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td></td></tr>
+            <tr class="pp3-marker"><td>50</td><td></td><td></td><td></td><td></td><td>/</td><td></td><td>&nbsp; - &nbsp; - &nbsp; -</td><td>FINAL OVER</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Fall of Wickets 2nd Innings -->
+    <div class="box-wrapper">
+      <div class="section-title">
+        <span>FALL OF WICKETS &mdash; INNINGS 2</span>
+        <span>RECORD SCORE &bull; BATSMAN &bull; OVER &bull; DISMISSAL METHOD</span>
+      </div>
+      <table class="umpire-table fow-table">
+        <thead>
+          <tr>
+            <th style="width: 6%;">Wkt</th>
+            <th style="width: 9%;">1st</th>
+            <th style="width: 9%;">2nd</th>
+            <th style="width: 9%;">3rd</th>
+            <th style="width: 9%;">4th</th>
+            <th style="width: 9%;">5th</th>
+            <th style="width: 9%;">6th</th>
+            <th style="width: 9%;">7th</th>
+            <th style="width: 9%;">8th</th>
+            <th style="width: 9%;">9th</th>
+            <th style="width: 9%;">10th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Score</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Batter Out</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">Over</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; background: var(--bg-subhead);">How Out / Bowler</td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bottom Grids: Rain/DLS Table, Bowlers Innings 2, Result & Sign-Off -->
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr 1.1fr; gap: 4px;">
+      
+      <!-- Bowler Summary Innings 2 -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">BOWLER SUMMARY (INN 2)</div>
+        <table class="umpire-table" style="font-size: 7px;">
+          <thead>
+            <tr>
+              <th style="width: 25%;">Bowler</th>
+              <th style="width: 27%;">Overs</th>
+              <th style="width: 12%;">O</th>
+              <th style="width: 12%;">M</th>
+              <th style="width: 12%;">R</th>
+              <th style="width: 12%;">W</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>2.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>3.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>4.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>5.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+            <tr><td>6.</td><td>[1-5] [6-10]</td><td></td><td></td><td></td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DLS / Rain Interruption Table -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">DLS / WEATHER CALCULATION</div>
+        <div style="padding: 3px; font-size: 7px; display: flex; flex-direction: column; gap: 2px;">
+          <div><strong>Min Overs For Match:</strong> 20 overs/side</div>
+          <div><strong>Time Lost:</strong> _____ m &bull; <strong>Deduct:</strong> _____ ov</div>
+          <div><strong>Revised Overs:</strong> _____ ov / side</div>
+          <div><strong>Revised PP:</strong> PP1: ___, PP2: ___, PP3: ___</div>
+          <div><strong>Bowler Limit:</strong> Max _____ ov each</div>
+          <div style="background: #fef08a; padding: 2px; border: 1px solid #eab308; border-radius: 2px; text-align: center; margin-top: 1px;">
+            <strong>REVISED DLS TARGET:</strong><br>
+            <span style="font-size: 11px; font-weight: 900;">______ RUNS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result & Sign-Off -->
+      <div class="box-wrapper" style="margin-bottom: 0;">
+        <div class="section-title">MATCH RESULT &amp; SIGN-OFF</div>
+        <div style="padding: 3px; font-size: 7.5px; display: flex; flex-direction: column; gap: 2px;">
+          <div><strong>Winner:</strong> _________________________________</div>
+          <div><strong>Margin:</strong> Runs: _____ &bull; Wkts: _____</div>
+          <div><strong>Player of Match:</strong> _____________________</div>
+          <div style="border-top: 1px dotted #94a3b8; padding-top: 1px;">
+            <strong>Law 41/42 Disciplinary / Warnings:</strong><br>
+            [ ] Running pitch &nbsp; [ ] Beamer &nbsp; [ ] Code of conduct
+          </div>
+          <div style="font-size: 7px; margin-top: 2px; display: flex; justify-content: space-between;">
+            <span>Ump 1: _________________</span>
+            <span>Ump 2: _________________</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> <!-- /Sheet 2 -->
+
+</div>
+
+</body>
+</html>
